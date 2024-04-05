@@ -1,4 +1,4 @@
-let rpsArray = ['rock', 'scissors', 'paper'];
+let rpsArray = ['rock','paper','scissors'];
 
 /**
  * Clear the decks
