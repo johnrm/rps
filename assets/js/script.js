@@ -1,16 +1,18 @@
-let rpsArray = ['rock','paper','scissors'];
-
 /**
  * Clear the decks
  * Reset game counters
  */
+let rpsArray = ['rock','paper','scissors'];
 let computerScore = 0;
 let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
 
-console.log(computerGuess());
-console.log(userGuess());
+computerRPS=computerGuess();
+console.log(computerRPS);
+userRPS=userGuess();
+console.log(userRPS);
+pickWinner();
 
 /**
  * Computer guess
@@ -28,4 +30,32 @@ function userGuess() {
     let guess = (Math.floor(Math.random() * 3));
     console.log("user: " + guess);
     return (rpsArray[guess]);
+}
+
+/**
+ * Pick a Winner
+ */
+function pickWinner() {
+    console.log("Computer guessed " + computerRPS + ".");
+    console.log("User guessed " + userRPS + ".");
+    if (
+        ((computerRPS === "rock") && (userRPS === "scissors")) ||
+        ((computerRPS === "scissors") && (userRPS === "paper")) ||
+        ((computerRPS === "paper") && (userRPS === "rock"))) {
+        console.log("Computer wins!");
+        computerScore += 1;
+    } else if (
+        ((userRPS === "rock" && computerRPS === "scissors")) ||
+        ((userRPS === "scissors" && computerRPS === "paper")) ||
+        ((userRPS === "paper" && computerRPS === "rock"))) {
+        console.log("User wins!");
+        userScore += 1;
+    } else {
+        console.log("Its a draw!");
+        //Add score for draw?
+        //        computerScore += 1;
+        //        userScore += 1;
+    }
+    console.log("Computer " + computerScore + " - User " + userScore);
+    console.log("");
 }
