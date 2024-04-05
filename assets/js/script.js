@@ -1,4 +1,4 @@
-let rpsArray = ['rock','scissors','paper'];
+let rpsArray = ['rock', 'scissors', 'paper'];
 
 /**
  * Clear the decks
@@ -9,7 +9,8 @@ let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
 
-console.log (computerGuess ());
+console.log(computerGuess());
+console.log(userGuess());
 
 /**
  * Computer guess
@@ -17,5 +18,14 @@ console.log (computerGuess ());
 function computerGuess() {
     let guess = (Math.floor(Math.random() * 3));
     console.log("computer: " + guess);
+    return (rpsArray[guess]);
+}
+
+/**
+ * User guess
+ */
+function userGuess() {
+    let guess = (Math.floor(Math.random() * 3));
+    console.log("user: " + guess);
     return (rpsArray[guess]);
 }
