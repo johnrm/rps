@@ -8,11 +8,20 @@ let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
 
+for (i=0; i<5; i++) {
 computerRPS=computerGuess();
 console.log(computerRPS);
 userRPS=userGuess();
 console.log(userRPS);
 pickWinner();
+/**
+ * Update scoreboard
+ */
+let liveComputerScore = document.getElementById('computerScore');
+let liveUserScore = document.getElementById('userScore');
+liveComputerScore.innerHTML  = parseInt(computerScore)
+liveUserScore.innerHTML = parseInt(userScore);
+}
 
 /**
  * Computer guess
