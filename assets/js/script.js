@@ -1,14 +1,30 @@
+// Wait for DOM to load before running.
+// Get button elements and add event listeners.
+
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            computerRPS = computerGuess();
+            userRPS = this.getAttribute("data-type");
+            pickWinner();
+        }
+        )
+    }
+});
+
+
 /**
- * Clear the decks
  * Reset game counters
  */
-let rpsArray = ['rock','paper','scissors'];
+let rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
 
-for (i=0; i<5; i++) {
+/*for (i=0; i<5; i++) {
 computerRPS=computerGuess();
 console.log(computerRPS);
 userRPS=userGuess();
@@ -17,11 +33,13 @@ pickWinner();
 /**
  * Update scoreboard
  */
+/*
 let liveComputerScore = document.getElementById('computerScore');
 let liveUserScore = document.getElementById('userScore');
 liveComputerScore.innerHTML  = parseInt(computerScore)
 liveUserScore.innerHTML = parseInt(userScore);
 }
+*/
 
 /**
  * Computer guess
