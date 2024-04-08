@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //Computer guesses
             computerRPS = computerGuess();
             //User guesses
-            userRPS = this.getAttribute("data-weapon");
+            userRPS = this.getAttribute("data-card");
             pickWinner();
             updateScore();
         }

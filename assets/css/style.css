@@ -6,3 +6,10 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
+
+button {
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 900;
+}
