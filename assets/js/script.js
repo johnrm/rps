@@ -1,20 +1,3 @@
-// Wait for DOM to load before running.
-// Get button elements and add event listeners.
-
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            computerRPS = computerGuess();
-            userRPS = this.getAttribute("data-type");
-            pickWinner();
-        }
-        )
-    }
-});
-
-
 /**
  * Reset game counters
  */
@@ -24,22 +7,33 @@ let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
 
-/*for (i=0; i<5; i++) {
-computerRPS=computerGuess();
-console.log(computerRPS);
-userRPS=userGuess();
-console.log(userRPS);
-pickWinner();
+// Wait for DOM to load before running.
+// Get button elements and add event listeners.
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            //Computer guesses
+            computerRPS = computerGuess();
+            //User guesses
+            userRPS = this.getAttribute("data-weapon");
+            pickWinner();
+            updateScore();
+        }
+        )
+    }
+});
+
 /**
  * Update scoreboard
  */
-/*
-let liveComputerScore = document.getElementById('computerScore');
-let liveUserScore = document.getElementById('userScore');
-liveComputerScore.innerHTML  = parseInt(computerScore)
-liveUserScore.innerHTML = parseInt(userScore);
+function updateScore() {
+    let liveComputerScore = document.getElementById('computerScore');
+    let liveUserScore = document.getElementById('userScore');
+    liveComputerScore.innerHTML = parseInt(computerScore)
+    liveUserScore.innerHTML = parseInt(userScore);
 }
-*/
 
 /**
  * Computer guess
@@ -47,15 +41,6 @@ liveUserScore.innerHTML = parseInt(userScore);
 function computerGuess() {
     let guess = (Math.floor(Math.random() * 3));
     console.log("computer: " + guess);
-    return (rpsArray[guess]);
-}
-
-/**
- * User guess
- */
-function userGuess() {
-    let guess = (Math.floor(Math.random() * 3));
-    console.log("user: " + guess);
     return (rpsArray[guess]);
 }
 
