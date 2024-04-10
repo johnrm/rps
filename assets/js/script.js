@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
             pickWinner();
             showCards();
             updateScore();
+            if ((userScore === 5) || (computerScore === 5)) {
+                console.log ("Game Over!");
+                userScore = 0;
+                computerScore = 0;
+            }
         }
         )
     }
