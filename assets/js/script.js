@@ -6,6 +6,7 @@ let computerScore = 0;
 let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
+let winner = "";
 
 // Wait for DOM to load before running.
 // Get button elements and add event listeners.
@@ -46,17 +47,21 @@ function pickWinner() {
         ((computerRPS === "scissors") && (userRPS === "paper")) ||
         ((computerRPS === "paper") && (userRPS === "rock"))) {
         console.log("Computer wins!");
+        winner = "computer";
         computerScore += 1;
     } else if (
         ((userRPS === "rock" && computerRPS === "scissors")) ||
         ((userRPS === "scissors" && computerRPS === "paper")) ||
         ((userRPS === "paper" && computerRPS === "rock"))) {
         console.log("User wins!");
+        winner = "user";
         userScore += 1;
     } else {
         console.log("Its a draw!");
+        winner = "draw";
     }
     console.log("Computer " + computerScore + " - User " + userScore);
+    console.log("Winner::::" + winner);
     console.log("");
 }
 
@@ -64,16 +69,22 @@ function pickWinner() {
  * Show cards
  */
 function showCards() {
+    //Computer card
     tempCard = document.getElementsByTagName('img')[0];
-    tempCard.src = `assets/images/${computerRPS}.jpg`
-    console.log (tempCard);
+    console.log("Winner:--:" + winner);
+    if (winner === "user") {
+        tempCard.src = `assets/images/${"no" + computerRPS}.jpg`;
+    } else {
+        tempCard.src = `assets/images/${computerRPS}.jpg`;
+    };
+    //User card
     tempCard = document.getElementsByTagName('img')[1];
-    tempCard.src = `assets/images/${userRPS}.jpg`
-    console.log (tempCard);
-
-    //computerCard.innerHTML = 1;
+    if (winner === "computer") {
+        tempCard.src = `assets/images/${"no" + userRPS}.jpg`;
+    } else {
+        tempCard.src = `assets/images/${userRPS}.jpg`;
+    };
 }
-
 
 /**
  * Update scoreboard
