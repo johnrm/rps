@@ -19,21 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
             //User guesses
             userRPS = this.getAttribute("data-card");
             pickWinner();
+            showCards();
             updateScore();
         }
         )
     }
 });
-
-/**
- * Update scoreboard
- */
-function updateScore() {
-    let liveComputerScore = document.getElementById('computerScore');
-    let liveUserScore = document.getElementById('userScore');
-    liveComputerScore.innerHTML = parseInt(computerScore)
-    liveUserScore.innerHTML = parseInt(userScore);
-}
 
 /**
  * Computer guess
@@ -67,4 +58,29 @@ function pickWinner() {
     }
     console.log("Computer " + computerScore + " - User " + userScore);
     console.log("");
+}
+
+/**
+ * Show cards
+ */
+function showCards() {
+    tempCard = document.getElementsByTagName('img')[0];
+    tempCard.src = `assets/images/${computerRPS}.jpg`
+    console.log (tempCard);
+    tempCard = document.getElementsByTagName('img')[1];
+    tempCard.src = `assets/images/${userRPS}.jpg`
+    console.log (tempCard);
+
+    //computerCard.innerHTML = 1;
+}
+
+
+/**
+ * Update scoreboard
+ */
+function updateScore() {
+    let liveComputerScore = document.getElementById('computerScore');
+    let liveUserScore = document.getElementById('userScore');
+    liveComputerScore.innerHTML = parseInt(computerScore)
+    liveUserScore.innerHTML = parseInt(userScore);
 }
