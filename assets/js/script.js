@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showCards();
             updateScore();
             if ((userScore === 5) || (computerScore === 5)) {
-                console.log ("Game Over!");
+                console.log("Game Over!");
                 userScore = 0;
                 computerScore = 0;
             }
@@ -52,18 +52,18 @@ function pickWinner() {
         ((computerRPS === "scissors") && (userRPS === "paper")) ||
         ((computerRPS === "paper") && (userRPS === "rock"))) {
         console.log("Computer wins!");
-        winner = "computer";
+        winner = "Computer wins!";
         computerScore += 1;
     } else if (
         ((userRPS === "rock" && computerRPS === "scissors")) ||
         ((userRPS === "scissors" && computerRPS === "paper")) ||
         ((userRPS === "paper" && computerRPS === "rock"))) {
         console.log("User wins!");
-        winner = "user";
+        winner = "User wins!";
         userScore += 1;
     } else {
         console.log("Its a draw!");
-        winner = "draw";
+        winner = "Its a draw!";
     }
     console.log("Computer " + computerScore + " - User " + userScore);
     console.log("Winner::::" + winner);
@@ -77,14 +77,14 @@ function showCards() {
     //Computer card
     tempCard = document.getElementsByTagName('img')[0];
     console.log("Winner:--:" + winner);
-    if (winner === "user") {
+    if (winner === "User wins!") {
         tempCard.src = `assets/images/${"no" + computerRPS}.jpg`;
     } else {
         tempCard.src = `assets/images/${computerRPS}.jpg`;
     };
     //User card
     tempCard = document.getElementsByTagName('img')[1];
-    if (winner === "computer") {
+    if (winner === "Computer wins!") {
         tempCard.src = `assets/images/${"no" + userRPS}.jpg`;
     } else {
         tempCard.src = `assets/images/${userRPS}.jpg`;
@@ -95,8 +95,12 @@ function showCards() {
  * Update scoreboard
  */
 function updateScore() {
+    let gameStatus = document.getElementById('play');
+    console.log(gameStatus);
+    gameStatus.innerHTML = (winner);
+    console.log(winner);
     let liveComputerScore = document.getElementById('computerScore');
-    let liveUserScore = document.getElementById('userScore');
     liveComputerScore.innerHTML = parseInt(computerScore)
+    let liveUserScore = document.getElementById('userScore');
     liveUserScore.innerHTML = parseInt(userScore);
 }
