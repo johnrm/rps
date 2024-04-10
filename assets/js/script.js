@@ -64,9 +64,6 @@ function pickWinner() {
         userScore += 1;
     } else {
         console.log("Its a draw!");
-        //Add score for draw?
-        //        computerScore += 1;
-        //        userScore += 1;
     }
     console.log("Computer " + computerScore + " - User " + userScore);
     console.log("");

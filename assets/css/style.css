@@ -3,12 +3,30 @@
 
 /* General style */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
+.game {
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.userinput {
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 button {
-    width: 100px;
+    width: 90px;
     border-radius: 5px;
     padding: 5px;
     font-weight: 900;
