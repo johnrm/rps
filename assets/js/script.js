@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showCards();
             updateScore();
             if ((userScore === 5) || (computerScore === 5)) {
+                document.getElementById('play').innerHTML = ("Game Over - " + winner);
                 console.log("Game Over!");
                 userScore = 0;
                 computerScore = 0;
@@ -51,8 +52,8 @@ function pickWinner() {
         ((computerRPS === "rock") && (userRPS === "scissors")) ||
         ((computerRPS === "scissors") && (userRPS === "paper")) ||
         ((computerRPS === "paper") && (userRPS === "rock"))) {
-        console.log("Computer wins!");
-        winner = "Computer wins!";
+        console.log("CPU wins!");
+        winner = "CPU wins!";
         computerScore += 1;
     } else if (
         ((userRPS === "rock" && computerRPS === "scissors")) ||
