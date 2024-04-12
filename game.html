@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>RPS</title>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id="score">
+        <h2>Score</h2>
+        <h3>CPU: <span id="computerScore">0</span> - User: <span id="userScore">0</span></h3>
+    </div>
+    <div class="game">
+        <div class="card" id="computerCard"><img src="assets/images/question.webp" height="100" alt="question mark">
+        </div>
+        <div class="card" id="userCard"><img src="assets/images/question.webp" height="100" alt="question mark"></div>
+    </div>
+    <div>
+        <h2 id="play">Time to play!</h2>
+    </div>
+    <div id="userInput">
+        <h3>-- Pick a card --</h3>
+        <button data-card="rock"><img src="assets/images/rock.webp" height="80" alt="rock image"></button>
+        <button data-card="paper"><img src="assets/images/paper.webp" height="80" alt="paper image"></button>
+        <button data-card="scissors"><img src="assets/images/scissors.webp" height="80" alt="scissors image"></button>
+    </div>
+    <br>
+    <h3><a href="index.html">Go Home!</a></h3>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

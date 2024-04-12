@@ -87,6 +87,7 @@ https://johnrm.github.io/zumpizza/<br>
 ([Back to top](#index))<br>
 
 ## Credits
+Description of game courtesy of Play and Playground Encyclopedia - https://www.pgpedia.com/
 
 ([Back to top](#index))<br>
 

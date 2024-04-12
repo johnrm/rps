@@ -4,32 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="game, quick, rock, paper, scissors">
+    <meta name="keywords" content="game, quick, rock, paper, scissors">
+    <!-- Title -->
     <title>RPS</title>
+    <!-- Favicon   
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+-->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="score">
-        <h2>Score</h2>
-        <h3>CPU: <span id="computerScore">0</span> - User: <span id="userScore">0</span></h3>
-    </div>
-    <div>
-        <h2 id="play">Time to play!</h2>
-    </div>
-    <div class="game">
-        <div class="card" id="computerCard"><img src="assets/images/question.webp" height="100" alt="question mark"></div>
-        <div class="card" id="userCard"><img src="assets/images/question.webp" height="100" alt="question mark"></div>
-    </div>
-    <div id="userInput">
-        <p>-- Pick a card --</p>
-        <button data-card="rock"><img src="assets/images/rock.webp" height="80" alt="rock image"></button>
-        <button data-card="paper"><img src="assets/images/paper.webp" height="80" alt="paper image"></button>
-        <button data-card="scissors"><img src="assets/images/scissors.webp" height="80" alt="scissors image"></button>
-    </div>
+    <!-- Header -->
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <!-- Navigate to game -->
+        <h3><a href="game.html">Play Game!</a></h3>
+    </header>
 
-    <script src="assets/js/script.js"></script>
+    <main>
+        <!-- Instructions -->
+        <h2>Instructions</h2>
+        <div class="instructions">
+            <p>The game is played by clicking or tapping on the card you wish to play. The Computer (CPU) will pick at the same time. The winner of the game is the first to 5 winning plays!</p>
+        </div>
+        <!-- About the game -->
+        <h2>About the game</h2>
+        <div class="about">
+            <p>Rock-Paper-Scissors is a game played to settle disputes between two people. Thought to be a game of
+                chance that depends on random luck similar to flipping coins or drawing straws, the game is often
+                taught to children to help them settle arguments between themselves on their own without adult
+                intervention. However, the game actually can be a game that has an element of skill that requires
+                quick thinking and perceptive reasoning.</p>
+            <p>The game is played with three possible hand signals that represent a rock, paper, and scissors. The
+                rock is a closed fist; paper is a flat hand with fingers and thumb extended and the palm facing
+                downward; and scissors is a fist with the index and middle fingers fully extended toward the
+                opposing player. Rock wins against scissors; paper wins against rock; and scissors wins against
+                paper. If both players throw the same hand signal, it is considered a tie, and play resumes until
+                there is a clear winner.</p>
+            <p>The hand signals are given simultaneously by both players. The ritual used to get players in sync
+                with each other so they can deliver their throws simultaneously is called the prime. This action
+                requires retracting the player’s fist from full-arm extension towards the shoulder and then back to
+                full extension. To ensure a fair match the players must be in sync with their primes. Players must
+                determine before play how many times they pump their arms during the prime phase, usually two or
+                three times before the final delivery of their throw.</p>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Social Network links -->
+        <ul id="socials">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i> </a>
+            </li>
+            <li><a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Youtube channel (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+
+    <!-- Fontawesome kit -->
+    <script src="https://kit.fontawesome.com/bbac8e3d76.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
