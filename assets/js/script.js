@@ -7,6 +7,7 @@ let userScore = 0;
 let computerRPS = "";
 let userRPS = "";
 let winner = "";
+let tempCard;
 
 // Wait for DOM to load before running.
 // Get button elements and add event listeners.
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 computerScore = 0;
             }
         }
-        )
+        );
     }
 });
 
@@ -76,17 +77,17 @@ function showCards() {
     tempCard = document.getElementsByTagName('img')[0];
     console.log("Winner:--:" + winner);
     if (winner === "User wins!") {
-        tempCard.src = `assets/images/${"no" + computerRPS}.png`;
+        tempCard.src = `assets/images/${"no" + computerRPS}.webp`;
     } else {
-        tempCard.src = `assets/images/${computerRPS}.png`;
-    };
+        tempCard.src = `assets/images/${computerRPS}.webp`;
+    }
     //User card
     tempCard = document.getElementsByTagName('img')[1];
     if (winner === "CPU wins!") {
-        tempCard.src = `assets/images/${"no" + userRPS}.png`;
+        tempCard.src = `assets/images/${"no" + userRPS}.webp`;
     } else {
-        tempCard.src = `assets/images/${userRPS}.png`;
-    };
+        tempCard.src = `assets/images/${userRPS}.webp`;
+    }
 }
 
 /**
@@ -98,7 +99,7 @@ function updateScore() {
     gameStatus.innerHTML = (winner);
     console.log(winner);
     let liveComputerScore = document.getElementById('computerScore');
-    liveComputerScore.innerHTML = parseInt(computerScore)
+    liveComputerScore.innerHTML = parseInt(computerScore);
     let liveUserScore = document.getElementById('userScore');
     liveUserScore.innerHTML = parseInt(userScore);
 }
