@@ -48,23 +48,20 @@ function computerGuess() {
 function pickWinner() {
     console.log("Computer guessed " + computerRPS + ".");
     console.log("User guessed " + userRPS + ".");
-    if (
+    if (computerRPS === userRPS) {
+        console.log("Its a draw!");
+        winner = "Its a draw!";
+    } else if (
         ((computerRPS === "rock") && (userRPS === "scissors")) ||
         ((computerRPS === "scissors") && (userRPS === "paper")) ||
         ((computerRPS === "paper") && (userRPS === "rock"))) {
         console.log("CPU wins!");
         winner = "CPU wins!";
         computerScore += 1;
-    } else if (
-        ((userRPS === "rock" && computerRPS === "scissors")) ||
-        ((userRPS === "scissors" && computerRPS === "paper")) ||
-        ((userRPS === "paper" && computerRPS === "rock"))) {
+    } else {
         console.log("User wins!");
         winner = "User wins!";
         userScore += 1;
-    } else {
-        console.log("Its a draw!");
-        winner = "Its a draw!";
     }
     console.log("Computer " + computerScore + " - User " + userScore);
     console.log("Winner::::" + winner);
@@ -79,16 +76,16 @@ function showCards() {
     tempCard = document.getElementsByTagName('img')[0];
     console.log("Winner:--:" + winner);
     if (winner === "User wins!") {
-        tempCard.src = `assets/images/${"no" + computerRPS}.jpg`;
+        tempCard.src = `assets/images/${"no" + computerRPS}.png`;
     } else {
-        tempCard.src = `assets/images/${computerRPS}.jpg`;
+        tempCard.src = `assets/images/${computerRPS}.png`;
     };
     //User card
     tempCard = document.getElementsByTagName('img')[1];
-    if (winner === "Computer wins!") {
-        tempCard.src = `assets/images/${"no" + userRPS}.jpg`;
+    if (winner === "CPU wins!") {
+        tempCard.src = `assets/images/${"no" + userRPS}.png`;
     } else {
-        tempCard.src = `assets/images/${userRPS}.jpg`;
+        tempCard.src = `assets/images/${userRPS}.png`;
     };
 }
 
