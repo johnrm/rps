@@ -55,7 +55,18 @@ ul {
 }
 
 /* Media query: tablets and larger - 768px and up */
-@media screen and (min-width: 768px) {}
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Media query: tablets and larger - 768px and up */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+}
 
 /* Media query: laptops and larger - 992px and up */
 @media screen and (min-width: 992px) {}
