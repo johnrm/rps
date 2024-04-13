@@ -51,6 +51,7 @@ a:active {
 }
 
 a.button,
+div.button,
 button {
 
     font-family: 'Poppins', sans-serif;
