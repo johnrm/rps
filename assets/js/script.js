@@ -23,11 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
             pickWinner();
             showCards();
             updateScore();
-            if ((userScore === 5) || (computerScore === 5)) {
-                document.getElementById('play').innerHTML = ("Game Over - " + winner);
+            if ((userScore === 5) || (computerScore === )) {
+//                document.getElementById('play').innerHTML = ("Game Over - " + winner);
                 console.log("Game Over!");
                 userScore = 0;
                 computerScore = 0;
+                document.getElementById('game-over').innerHTML = ("Game Over - " + winner);
+                modal.style.display = "block";
             }
         }
         );
@@ -103,3 +105,22 @@ function updateScore() {
     let liveUserScore = document.getElementById('userScore');
     liveUserScore.innerHTML = parseInt(userScore);
 }
+
+// Get the modal
+var modal = document.getElementById("gameModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+};
+
