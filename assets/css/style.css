@@ -74,7 +74,15 @@ ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    font-size: 1.5em;
+    color: #000;
 }
+
+#socials i {
+font-size: 1.5em;
+color: #000;
+}
+
 
 /* The Modal (background) */
 .modal {
