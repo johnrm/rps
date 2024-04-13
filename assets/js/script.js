@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             pickWinner();
             showCards();
             updateScore();
-            if ((userScore === 5) || (computerScore === )) {
+            if ((userScore === 5) || (computerScore === 5)) {
 //                document.getElementById('play').innerHTML = ("Game Over - " + winner);
                 console.log("Game Over!");
                 userScore = 0;
@@ -123,4 +123,3 @@ window.onclick = function (event) {
 span.onclick = function () {
     modal.style.display = "none";
 };
-
