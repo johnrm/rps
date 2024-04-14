@@ -98,9 +98,10 @@ span.onclick = function () {
     modal.style.display = "none";
 };
 
+// Game over
 function gameOver() {
     userScore = 0;
     computerScore = 0;
-    document.getElementById('game-over').innerHTML = ("Game Over - " + winner);
+    document.getElementById('game-over').innerHTML = ("Game Over<br>" + winner);
     modal.style.display = "block";
 }
