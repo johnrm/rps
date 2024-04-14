@@ -23,13 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             pickWinner();
             showCards();
-            updateScore();
-            if ((userScore === 5) || (computerScore === 5)) {
-                userScore = 0;
-                computerScore = 0;
-                document.getElementById('game-over').innerHTML = ("Game Over - " + winner);
-                modal.style.display = "block";
-            }
+            updateScore();          
+            if ((userScore === 5) || (computerScore === 5)) gameOver();
         }
         );
     }
@@ -49,10 +44,10 @@ function pickWinner() {
         ((computerRPS === "rock") && (userRPS === "scissors")) ||
         ((computerRPS === "scissors") && (userRPS === "paper")) ||
         ((computerRPS === "paper") && (userRPS === "rock"))) {
-        winner = "CPU wins!";
+        winner = "Computer wins!";
         computerScore += 1;
     } else {
-        winner = "User wins!";
+        winner = "You win!";
         userScore += 1;
     }
 }
@@ -61,14 +56,14 @@ function pickWinner() {
 function showCards() {
     //Computer card
     tempCard = document.getElementsByTagName('img')[0];
-    if (winner === "User wins!") {
+    if (winner === "You win!") {
         tempCard.src = `assets/images/${"no" + computerRPS}.webp`;
     } else {
         tempCard.src = `assets/images/${computerRPS}.webp`;
     }
     //User card
     tempCard = document.getElementsByTagName('img')[1];
-    if (winner === "CPU wins!") {
+    if (winner === "Computer wins!") {
         tempCard.src = `assets/images/${"no" + userRPS}.webp`;
     } else {
         tempCard.src = `assets/images/${userRPS}.webp`;
@@ -102,3 +97,10 @@ window.onclick = function (event) {
 span.onclick = function () {
     modal.style.display = "none";
 };
+
+function gameOver() {
+    userScore = 0;
+    computerScore = 0;
+    document.getElementById('game-over').innerHTML = ("Game Over - " + winner);
+    modal.style.display = "block";
+}
