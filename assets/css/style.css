@@ -4,11 +4,16 @@
 /* General style */
 body {
     background-color: #faf8f2;
-    /*    display: flex;*/
+    display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    justify-content: center;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+header, main, footer {
+    max-width: 80%;
 }
 
 /* Remove default hyperlink styling */
@@ -65,15 +70,14 @@ button {
 
 ul {
     list-style-type: none;
-    justify-content: center;
 }
 
 #socials {
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
     display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
     font-size: 1.5em;
     color: #000;
 }
@@ -117,7 +121,6 @@ ul {
     /* Black w/ opacity */
 }
 
-
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -126,7 +129,6 @@ ul {
     border: 1px solid #888;
     width: 80%;
 }
-
 
 /* The Close Button */
 .close {
