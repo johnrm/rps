@@ -88,9 +88,6 @@ function updateScore() {
 // Get the modal
 var modal = document.getElementById("gameModal");
 
-// Get the close modal element
-var span = document.getElementsByClassName("close")[0];
-
 // Game over
 function gameOver() {
     userScore = 0;

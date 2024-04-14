@@ -9,7 +9,6 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     align-items: center;
-    /* justify-content: center; */
 }
 
 header,
@@ -17,18 +16,11 @@ main {
     max-width: 80%;
 }
 
-/* Remove default hyperlink styling */
-a:link {
+/* Remove default hyperlink style */
+a {
+    color: inherit;
     text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:active {
-    text-decoration: none;
-}
+} 
 
 .game {
     margin-left: auto;
@@ -116,7 +108,7 @@ footer i {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 150px;
+    padding-top: 225px;
     left: 0;
     top: 0;
     width: 100%;
@@ -135,7 +127,6 @@ footer i {
     background-color: #fafaf0;
     border: 4px solid #bdada1;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
-
     margin: auto;
     padding: 20px;
 }
