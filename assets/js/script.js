@@ -1,6 +1,4 @@
-/**
- * Reset game counters
- */
+//Reset game counters
 let rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
@@ -16,15 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
+
             //Computer guesses
             computerRPS = computerGuess();
+
             //User guesses
             userRPS = this.getAttribute("data-card");
+
             pickWinner();
             showCards();
             updateScore();
             if ((userScore === 5) || (computerScore === 5)) {
-//                document.getElementById('play').innerHTML = ("Game Over - " + winner);
                 userScore = 0;
                 computerScore = 0;
                 document.getElementById('game-over').innerHTML = ("Game Over - " + winner);
@@ -35,17 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-/**
- * Computer guess
- */
+// Computer guess
 function computerGuess() {
     let guess = (Math.floor(Math.random() * 3));
     return (rpsArray[guess]);
 }
 
-/**
- * Pick a Winner
- */
+// Pick a Winner
 function pickWinner() {
     if (computerRPS === userRPS) {
         winner = "Its a draw!";
@@ -61,9 +57,7 @@ function pickWinner() {
     }
 }
 
-/**
- * Show cards
- */
+// Show cards
 function showCards() {
     //Computer card
     tempCard = document.getElementsByTagName('img')[0];
@@ -81,9 +75,7 @@ function showCards() {
     }
 }
 
-/**
- * Update scoreboard
- */
+// Update scores
 function updateScore() {
     let gameStatus = document.getElementById('play');
     gameStatus.innerHTML = (winner);
@@ -96,17 +88,17 @@ function updateScore() {
 // Get the modal
 var modal = document.getElementById("gameModal");
 
-// Get the <span> element that closes the modal
+// Get the close modal element
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks anywhere outside of the modal, close it
+// Close modal if click outside modal 
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 };
 
-// Close the modal
+// Close the modal when span is clicked
 span.onclick = function () {
     modal.style.display = "none";
 };
