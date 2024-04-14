@@ -95,7 +95,7 @@ footer i {
     color: black;
     padding: 5px;
     width: auto;
-    height: 240px;
+    height: 220px;
     overflow: auto;
     border: 1px solid #ccc;
 }
@@ -155,7 +155,7 @@ footer i {
 }
 
 /* Media query: small dislpay - up to 290px */
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 290px) {
 
     h1,
     h2 {
@@ -167,9 +167,30 @@ footer i {
     footer {
         max-width: 95%;
     }
+
     .about {
         width: auto;
         height: 150px;
+    }
+}
+
+/* Media query: small dislpay - up to 400px */
+@media screen and (min-width: 291px) {
+
+    h1,
+    h2 {
+        font-size: 1.5em;
+    }
+
+    header,
+    main,
+    footer {
+        max-width: 95%;
+    }
+
+    .about {
+        width: auto;
+        height: 220px;
     }
 }
 
@@ -179,6 +200,3 @@ footer i {
         font-size: 2em;
     }
 }
-
-/* Media query: laptops and larger - 992px and up */
-@media screen and (min-width: 992px) {}
