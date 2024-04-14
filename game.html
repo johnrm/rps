@@ -25,7 +25,6 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <!-- <span class="close">&times;</span> -->
             <p id="game-over"></p>
             <a href="index.html" class="button">Go Home</a>
             <a href="game.html" class="button">Again again!</a>
@@ -47,9 +46,10 @@
     <h2 id="play">Lets play!</h2>
     <div id="userInput">
         <h3>-- Pick a card --</h3>
-        <button data-card="rock"><img src="assets/images/rock.webp" height="80" alt="rock image"></button>
-        <button data-card="paper"><img src="assets/images/paper.webp" height="80" alt="paper image"></button>
-        <button data-card="scissors"><img src="assets/images/scissors.webp" height="80" alt="scissors image"></button>
+        <button data-card="rock"><img src="assets/images/rock.webp" height="80" alt="rock image" onclick="playSound()"></button>
+        <button data-card="paper"><img src="assets/images/paper.webp" height="80" alt="paper image" onclick="playSound()"></button>
+        <button data-card="scissors"><img src="assets/images/scissors.webp" height="80" alt="scissors image" onclick="playSound()"></button>
+        <audio id="clickSound" src="assets/sound/640020__nxrt__basic-mouse-click-ui.wav" autoplay="false" ></audio>
     </div>
     <br>
     <a href="index.html" class="button">Go Home!</a>

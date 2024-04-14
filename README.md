@@ -98,6 +98,7 @@ https://johnrm.github.io/rps/<br>
 ## Credits
 Description of game (about) courtesy of Play and Playground Encyclopedia - https://www.pgpedia.com/
 Card Graphics designed by the developer
+Click sound courtesy of freesound.org - https://freesound.org/s/640020/
 
 ([Back to top](#index))<br>
 

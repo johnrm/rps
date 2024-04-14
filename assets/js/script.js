@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             //User guesses
             userRPS = this.getAttribute("data-card");
-
+            // playSound ();
             pickWinner();
             showCards();
             updateScore();          
@@ -34,6 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function computerGuess() {
     let guess = (Math.floor(Math.random() * 3));
     return (rpsArray[guess]);
+}
+
+// Click sound
+function playSound() {
+    let sound = document.getElementById("clickSound");
+    sound.play();
 }
 
 // Pick a Winner
