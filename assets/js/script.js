@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
             updateScore();
             if ((userScore === 5) || (computerScore === 5)) {
 //                document.getElementById('play').innerHTML = ("Game Over - " + winner);
-                console.log("Game Over!");
                 userScore = 0;
                 computerScore = 0;
                 document.getElementById('game-over').innerHTML = ("Game Over - " + winner);
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function computerGuess() {
     let guess = (Math.floor(Math.random() * 3));
-    console.log("computer: " + guess);
     return (rpsArray[guess]);
 }
 
@@ -49,26 +47,18 @@ function computerGuess() {
  * Pick a Winner
  */
 function pickWinner() {
-    console.log("Computer guessed " + computerRPS + ".");
-    console.log("User guessed " + userRPS + ".");
     if (computerRPS === userRPS) {
-        console.log("Its a draw!");
         winner = "Its a draw!";
     } else if (
         ((computerRPS === "rock") && (userRPS === "scissors")) ||
         ((computerRPS === "scissors") && (userRPS === "paper")) ||
         ((computerRPS === "paper") && (userRPS === "rock"))) {
-        console.log("CPU wins!");
         winner = "CPU wins!";
         computerScore += 1;
     } else {
-        console.log("User wins!");
         winner = "User wins!";
         userScore += 1;
     }
-    console.log("Computer " + computerScore + " - User " + userScore);
-    console.log("Winner::::" + winner);
-    console.log("");
 }
 
 /**
@@ -77,7 +67,6 @@ function pickWinner() {
 function showCards() {
     //Computer card
     tempCard = document.getElementsByTagName('img')[0];
-    console.log("Winner:--:" + winner);
     if (winner === "User wins!") {
         tempCard.src = `assets/images/${"no" + computerRPS}.webp`;
     } else {
@@ -97,9 +86,7 @@ function showCards() {
  */
 function updateScore() {
     let gameStatus = document.getElementById('play');
-    console.log(gameStatus);
     gameStatus.innerHTML = (winner);
-    console.log(winner);
     let liveComputerScore = document.getElementById('computerScore');
     liveComputerScore.innerHTML = parseInt(computerScore);
     let liveUserScore = document.getElementById('userScore');
