@@ -86,18 +86,6 @@ var modal = document.getElementById("gameModal");
 // Get the close modal element
 var span = document.getElementsByClassName("close")[0];
 
-// Close modal if click outside modal 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
-// Close the modal when span is clicked
-span.onclick = function () {
-    modal.style.display = "none";
-};
-
 // Game over
 function gameOver() {
     userScore = 0;

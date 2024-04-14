@@ -76,10 +76,8 @@ footer {
 ul {
     list-style-type: none;
     font-size: 1.5em;
-    /* max-width: 80%; */
     text-align: center;
     display: flex;
-    /* justify-content: space-between; */
     justify-content: space-evenly;
     padding: 5px 0;
     color: #000;
