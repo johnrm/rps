@@ -12,7 +12,8 @@ body {
     /* justify-content: center; */
 }
 
-header, main {
+header,
+main {
     max-width: 80%;
 }
 
@@ -92,10 +93,10 @@ footer i {
 .about {
     background: #fafaf0;
     color: black;
-    padding: 15px;
+    padding: 5px;
     width: auto;
     height: 240px;
-    overflow: scroll;
+    overflow: auto;
     border: 1px solid #ccc;
 }
 
@@ -154,9 +155,21 @@ footer i {
 }
 
 /* Media query: small dislpay - up to 290px */
-@media screen and (max-width: 280px) {
-    h1, h2 {
+@media screen and (max-width: 355px) {
+
+    h1,
+    h2 {
         font-size: 1.3em;
+    }
+
+    header,
+    main,
+    footer {
+        max-width: 95%;
+    }
+    .about {
+        width: auto;
+        height: 150px;
     }
 }
 
