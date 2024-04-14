@@ -192,4 +192,7 @@ footer i {
     h1 {
         font-size: 2em;
     }
+    .about {
+        height: 400px;
+    }
 }
