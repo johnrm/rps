@@ -90,7 +90,10 @@ Consider Color contrasts as specified in [WCAG 2.1 Contrast Guidelines](https://
 A click sound was added towards the end of development to the game page.\
 I found that this sound would play every time on page load.\
 I believe this was because I was leaning on an img onclick event to trigger html audio combined with the 'button of bottons' loop.\
-I removed code from game.html and added the playSound() function which is lot cleaner and works well.
+I removed code from game.html and added the playSound() function which is lot cleaner and works well.\
+
+The site was throwing a manifest error to the console.\
+This was corrected by updating the manifest URL link.
 
 ([Back to top](#index))
 
