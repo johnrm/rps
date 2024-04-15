@@ -11,7 +11,7 @@
 * [Validate html and CSS](#validate-html-and-css)
 
 ## Live Site
-https://johnrm.github.io/rps/\
+https://johnrm.github.io/rps/
 
 ([Back to top](#index))
 
@@ -19,7 +19,7 @@ https://johnrm.github.io/rps/\
 Rock Paper Scissors is an implementation of the traditional Rock Paper Scissors game.\
 The player competes against the computer - The game is won with 5 winning plays.\
 The computers choice is random.\
-A message (Modal) Pops up when either the computer or the user gets to 5.\
+A message (Modal) Pops up when either the computer or the user gets to 5.
 
 ([Back to top](#index))
 
@@ -34,6 +34,7 @@ Game page - 'game.html' - The game itself with a link back to the Home page - in
 
 ### Responsiveness
 The site has been made responsive, development started with mobile first in mind. The site works well on mobile phone screen up to HD computer display.
+![alt Screenshot of Responsiveness test](readme_images/responsive.jpg)
 
 ### Home page
 This page explains the rules to the player, and provides some background to the game in the form of a scrollable 'About' box\
@@ -52,11 +53,12 @@ The Game page has also a Clickable button to return to the Home page.
 
 ### 404 page
 In the event of any missing page, the user is presented with a 404 page (Page not found).\
-The link on this page brings the user back to the Home page - index.html\
+The link on this page brings the user back to the Home page - index.html
+![404 page](readme_images/404.jpg)
 
 ## Wireframe
 Wireframe to show a pre-development perspective of the requirement.\
-![Wireframe of proposed site](readme_images/wireframe.jpg)<br>
+![Wireframe of proposed site](readme_images/wireframe.jpg)
 
 ## Testing 
 Testing has been consistent throughout the project.\
@@ -65,24 +67,75 @@ Site has been give to several users for UX feedback and redevolopment as appropr
 
 ### Responsiveness
 
-Expected: 
+Expected: Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
 
-Actual:
+Actual: All behaviour is as expected
 
-Devices:
+Website was opened on the following devices and no responsiveness issues were seen:
 - Google Pixel 4
 - Samsung Galaxy A53
 - Samsung Galaxy Tablet
+- Dell Latitude 5289
 
 ### Accessibility
 
-Use [Wave Accessibility](https://wave.webaim.org/)
+[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
 
-Consider Color contrasts as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+Testing was focused to ensure the following criteria were met:
+
+- All forms have associated labels or aria-labels so that this is read out on a screen reader to users who tab to form inputs
+- Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
+- All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
+- All not textual content had alternative text or titles so descriptions are read out to screen readers
+- HTML page lang attribute has been set
+- Aria properties have been implemented correctly
+- WCAG 2.1 Coding best practices being followed
+
+Manual tests were also performed to ensure the website was as accessible as possible.
 
 ### Lighthouse Testing
+Accessibility score was 100% for accessibility for every page in Lighthouse tools in Chrome Developertools.
+
+index.html\
+![Index](readme_images/lh_index.jpg)
+
+game.html\
+![Game](readme_images/lh_game.jpg)
+
+404.html\
+![404](readme_images/lh_404.jpg)
 
 ### Functional Testing
+**Navigation Links**
+
+Testing was performed to ensure all navigation links on the respective pages navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
+
+| Navigation Link | Page to Load    |
+| --------------- | --------------- |
+| Home            | index.html      |
+| Game            | game.html       |
+
+Links on all pages navigated to the correct pages as expected.
+
+**Game Testing**
+
+Extensive testing was performed on the game.
+Ux testng was carried out by other parties also, critique and feedback was implented in the site.
+
+Game tests:
+
+Play a card:\
+Expected: Both computer and player card is played.\
+Actual: Card is played by computer and player.
+
+Play Audio:\
+Expected: Click is generated when card is played.\
+Actual: Audio plays as expected.
+
+Card image is dispayed:\
+Expected: Card image shown depends on win/lose, Red X is on losing card\
+Actual: Correct card image is shown
 
 ([Back to top](#index))
 
@@ -107,14 +160,17 @@ Select Settings > Under Code and Automation, select Pages (Github pages)\
 Under build and deployment, select the 'main' branch.\
 Click Save.\
 After a few minutes the site deploys is accessible here...\
-https://johnrm.github.io/rps/\
+https://johnrm.github.io/rps/
 
 ([Back to top](#index))
 
 ## Credits
-Description of game (about) courtesy of Play and Playground Encyclopedia - https://www.pgpedia.com/\
-Card Graphics designed by the developer\
-Click sound courtesy of freesound.org - https://freesound.org/s/640020/\
+Description of game (about) courtesy of Play and Playground Encyclopedia - https://www.pgpedia.com/
+
+Card Graphics designed by the developer
+
+Click sound courtesy of freesound.org - https://freesound.org/s/640020/
+
 Social media code taken and modified from Love-Running walk-through project.
 
 ([Back to top](#index))
