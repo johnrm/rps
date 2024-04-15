@@ -20,7 +20,7 @@ main {
 a {
     color: inherit;
     text-decoration: none;
-} 
+}
 
 .game {
     margin-left: auto;
@@ -44,9 +44,9 @@ a {
 }
 
 .score {
-    font-size:xx-large;
+    font-size: xx-large;
     width: 110px;
-    display: inline-block;    
+    display: inline-block;
 }
 
 #userinput {
@@ -198,6 +198,6 @@ footer i {
     }
 
     .about {
-        height: 400px;
+        height: 300px;
     }
 }

@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             //User guesses
             userRPS = this.getAttribute("data-card");
-            playSound ();
+            playSound();
             pickWinner();
             showCards();
-            updateScore();          
+            updateScore();
             if ((userScore === 5) || (computerScore === 5)) gameOver();
         }
         );
@@ -36,7 +36,7 @@ function computerGuess() {
     return (rpsArray[guess]);
 }
 
-function playSound(){
+function playSound() {
     var audio = new Audio("assets/sound/640020__nxrt__basic-mouse-click-ui.wav");
     audio.play();
 }
