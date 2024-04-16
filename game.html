@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Meta tags for search engines -->
     <meta name="description" content="game, quick, rock, paper, scissors">
     <meta name="keywords" content="game, quick, rock, paper, scissors">
@@ -31,12 +31,13 @@
         <!-- Modal content -->
         <div class="modal-content">
             <p id="game-over"></p>
-            <a href="game.html" class="button">Play again</a>
+            <a id="again" class="button">Play again</a>
             <a href="index.html" class="button">Home</a>
         </div>
 
     </div>
 
+    <!-- Score section -->
     <div class="scores">
         <p class="scorename">Computer</p>
         <p class="scorename">You</p>
@@ -45,25 +46,35 @@
         <span class="score" id="userScore">0</span>
     </div>
 
+    <!-- Game section -->
     <div class="game">
-        <div class="button" id="computerCard"><img src="assets/images/question.webp" height="100"
-                alt="question mark">
+        <div class="button" id="computerCard"><img src="assets/images/question.webp" height="100" alt="question mark">
         </div>
         <div class="button" id="userCard"><img src="assets/images/question.webp" height="100" alt="question mark">
         </div>
     </div>
 
+    <!-- Card selection -->
     <h2 id="play">Lets play!</h2>
     <div id="userInput">
         <h3>-- Pick a card --</h3>
-        <button data-card="rock"><img src="assets/images/rock.webp" height="80" alt="rock image" ></button>
-        <button data-card="paper"><img src="assets/images/paper.webp" height="80" alt="paper image"></button>
-        <button data-card="scissors"><img src="assets/images/scissors.webp" height="80" alt="scissors image" ></button>
+        <button class="card" data-card="rock"><img src="assets/images/rock.webp" height="80" alt="rock image"></button>
+        <button class="card" data-card="paper"><img src="assets/images/paper.webp" height="80"
+                alt="paper image"></button>
+        <button class="card" data-card="scissors"><img src="assets/images/scissors.webp" height="80"
+                alt="scissors image"></button>
     </div>
     <br>
-    <a href="index.html" class="button">Go Home!</a>
-    
+    <span>
+        <a href="index.html" class="button">Go Home!</a>
+        <button id="audio">Audio</i></button>
+    </span>
+
     <script src="assets/js/script.js"></script>
+
+    <!-- Fontawesome kit -->
+    <script src="https://kit.fontawesome.com/bbac8e3d76.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
