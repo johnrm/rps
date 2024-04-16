@@ -21,6 +21,10 @@ The player competes against the computer - The game is won with 5 winning plays.
 The computers choice is random.\
 A message (Modal) Pops up when either the computer or the user gets to 5.
 
+## Further Development
+Plans for further development include adding levels and better visual represenation of scoring increase.\
+Other avenues for further development would be the addition of online competitors and adding Spock & Lizard functionality.
+
 ([Back to top](#index))
 
 ## Site features
@@ -53,12 +57,41 @@ The Game page has also a Clickable button to return to the Home page.
 
 ### 404 page
 In the event of any missing page, the user is presented with a 404 page (Page not found).\
-The link on this page brings the user back to the Home page - index.html
+The link on this page brings the user back to the Home page - index.html\
 ![404 page](readme_images/404.jpg)
 
 ## Wireframe
 Wireframe to show a pre-development perspective of the requirement.\
 ![Wireframe of proposed site](readme_images/wireframe.jpg)
+
+## Technolgies used
+**HTML**
+The structure of the Website was developed in HTML.
+
+**CSS**
+The Website was styled using CSS in an external file.
+
+**JavaScript**
+The game logic was created in JavaScript in an external file.
+
+**GitHub**
+Source code is hosted on GitHub and deployed using Git Pages.
+
+**Git**
+Used to commit and push code during the development of the Website
+
+**GitPod**
+The website was developed using GitPod online IDE
+
+**Font Awesome**
+Footer Icons used are from https://fontawesome.com/
+
+**Favicon.io**
+favicon files were created at https://favicon.io/favicon-converter/
+
+**MSPaint**
+Wireframe was created using MSPaint, standard in MS Windows
+
 
 ## Testing 
 Testing has been consistent throughout the project.\
